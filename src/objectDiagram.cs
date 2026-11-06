@@ -80,7 +80,7 @@ namespace FootballTransfer
         public string Status { get; set; }
         public DateTime Date { get; set; }
 
-        // Связи с другими объектами
+
         public Club SellingClub { get; set; }
         public Club BuyingClub { get; set; }
         public Player Player { get; set; }
@@ -118,7 +118,6 @@ namespace FootballTransfer
             Club buyingClub = new Club(
                 "United FC", "England");
 
-            // Создание объекта футболиста
             Player player = new Player(
                 "Ivan Petrov", 12000000m);
 
