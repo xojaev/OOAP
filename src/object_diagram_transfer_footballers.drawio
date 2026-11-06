@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-11-06T12:30:00.000Z" agent="ChatGPT" version="24.7.17" type="device">
+  <diagram id="object-diagram-transfer" name="Диаграмма объектов">
+    <mxGraphModel dx="1422" dy="850" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1190" pageHeight="842" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="seller" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;u&gt;&lt;b&gt;sellingClub : Club&lt;/b&gt;&lt;/u&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left&quot;&gt;name = &quot;North FC&quot;&lt;br&gt;country = &quot;England&quot;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=13;strokeWidth=1.5;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="55" y="165" width="245" height="112" as="geometry"/>
+        </mxCell>
+        <mxCell id="buyer" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;u&gt;&lt;b&gt;buyingClub : Club&lt;/b&gt;&lt;/u&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left&quot;&gt;name = &quot;United FC&quot;&lt;br&gt;country = &quot;England&quot;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=13;strokeWidth=1.5;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="891" y="165" width="245" height="112" as="geometry"/>
+        </mxCell>
+        <mxCell id="player" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;u&gt;&lt;b&gt;player : Player&lt;/b&gt;&lt;/u&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left&quot;&gt;name = &quot;Ivan Petrov&quot;&lt;br&gt;marketValue = 12 000 000 EUR&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=13;strokeWidth=1.5;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="55" y="387" width="245" height="125" as="geometry"/>
+        </mxCell>
+        <mxCell id="contract" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;u&gt;&lt;b&gt;currentContract : Contract&lt;/b&gt;&lt;/u&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left&quot;&gt;status = &quot;ACTIVE&quot;&lt;br&gt;contractUntil = 30.06.2027&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=13;strokeWidth=1.5;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="473" y="387" width="245" height="125" as="geometry"/>
+        </mxCell>
+        <mxCell id="transfer" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;u&gt;&lt;b&gt;transfer : Transfer&lt;/b&gt;&lt;/u&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left&quot;&gt;price = 10 000 000 EUR&lt;br&gt;status = REGISTERED&lt;br&gt;date = 15.08.2026&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=13;strokeWidth=1.5;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="450" y="162" width="290" height="135" as="geometry"/>
+        </mxCell>
+        <mxCell id="window" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;u&gt;&lt;b&gt;summerWindow : TransferWindow&lt;/b&gt;&lt;/u&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left&quot;&gt;name = &quot;Summer 2026&quot;&lt;br&gt;startDate = 01.06.2026&lt;br&gt;endDate = 31.08.2026&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=13;strokeWidth=1.5;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="55" y="637" width="245" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="regulator" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;u&gt;&lt;b&gt;regulator : Regulator&lt;/b&gt;&lt;/u&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left&quot;&gt;&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=13;strokeWidth=1.5;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="891" y="637" width="245" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" value="sellingClub" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="seller" target="transfer">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" value="buyingClub" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="transfer" target="buyer">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" value="player" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="player" target="transfer">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" value="window" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="window" target="transfer">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" value="registeringBody" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="transfer" target="regulator">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" value="signatory" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="player" target="contract">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7" value="owner" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="seller" target="contract">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
