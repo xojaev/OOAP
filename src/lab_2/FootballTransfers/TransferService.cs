@@ -9,7 +9,7 @@ public class TransferService
         this.repository = repository ?? throw new ArgumentNullException(nameof(repository));
     }
 
-    public Transfer ProcessTransfer(ClubRepresentative representative, Player player,
+    public TransferStatus ProcessTransfer(ClubRepresentative representative, Player player,
         decimal price, DateTime date, TransferWindow window, Regulator regulator)
     {
         ArgumentNullException.ThrowIfNull(representative);
@@ -32,13 +32,13 @@ public class TransferService
         if (!valid)
         {
             transfer.SetStatus(TransferStatus.Rejected);
-            return transfer;
+            return transfer.Status;
         }
 
         transfer.SetStatus(regulator.Register(transfer));
         if (transfer.Status == TransferStatus.Registered && !repository.Save(transfer))
             throw new InvalidOperationException("Registered transfer was not saved.");
 
-        return transfer;
+        return transfer.Status;
     }
 }
